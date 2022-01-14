@@ -12,9 +12,9 @@ nav_order: 2
 
 - Each agent performs the consensus step and then descent along the local subgradient direction of it's own **convex objective function**
 
-- $x_i{(k+1)} = \sum_{}^{}{w_{ij}x_j{(k)}} - \alpha(k) \Delta f_i(x_i)$
+- $x^i{(k+1)} = \sum_{}^{}{w_{ij}x^j{(k)}} - \alpha(k) \Delta f_i(x^i)$
 
-- $x_i \in \mathcal{R}^n$ : agents i's estimate at time k
+- $x^i \in \mathcal{R}^n$ : agents i's estimate at time k
 - Condition for convergence
   - $\sum_{k=0}^{\infty}{\alpha(k)} = \infty$
   - $\sum_{k=0}^{\infty}{(\alpha(k))^2} < \infty$
@@ -46,3 +46,18 @@ def DGD(W:np.array,X:np.array,iter:np.int32,subgradient,alpha):
     return np.array(values)
 ```
 
+
+
+## Examples 
+
+* ###   Qudratic function 
+  * $\min f(x) = \sum_{i=1}^{i=4}{(x_i-i)^2} , x^j=(x^j_1,x^j_2,x^j_3,x^j_4) \in \mathcal{R}^4$
+  * Assuming $f_i(x) = (x_i-i)^2$
+  * optimal solution : $(1,2,3,4)$
+  * taking $\alpha(k) = \frac{a}{b+k}$ where a,b are constants
+
+  * <img src="../Experiments/../../Experiments/distributed%20learning/results/DGD-1a.png">
+  * <img src="../Experiments/../../Experiments/distributed%20learning/results/DGD-1c.png">
+  
+  * <img src="../Experiments/../../Experiments/distributed%20learning/results/DGD-1f.png">
+    
