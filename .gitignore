@@ -54,3 +54,6 @@ docs/_build/
 # Jekyll Related
 _site/
 *.jekyll-cache/
+.sass-cache/
+.jekyll-cache/
+ 

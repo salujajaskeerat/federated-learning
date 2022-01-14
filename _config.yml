@@ -5,3 +5,21 @@
 # Theme
 # theme: "just-the-docs"
 remote_theme: pmarsceill/just-the-docs
+
+plugins:
+  - jekyll-latex
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

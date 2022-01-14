@@ -1,7 +1,8 @@
 # Local Setting
-baseurl: ""
-url: ""
+# baseurl: ""
+# url: ""
 
 # Theme
 theme: "just-the-docs"
 # remote_theme: pmarsceill/just-the-docs
+markdown: kramdown

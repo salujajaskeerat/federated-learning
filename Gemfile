@@ -2,10 +2,12 @@
 
 source "https://rubygems.org"
 
-git_source(:github) { |repo_name| "https://github.com/salujajaskeerat/federated-learning}" }
-
-
 
 gem "jekyll"
 gem "just-the-docs"
-gem 'github-pages'
+gem "github-pages", group: :jekyll_plugins
+gem "kramdown"
+
+group :jekyll_plugins do
+  gem "jekyll-latex"
+end
