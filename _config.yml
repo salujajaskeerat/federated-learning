@@ -10,6 +10,5 @@ remote_theme: pmarsceill/just-the-docs
 #   - jekyll-latex
 
 markdown: kramdown
-kramdown:
-  mathjs
+
 
