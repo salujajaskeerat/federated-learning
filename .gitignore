@@ -49,3 +49,8 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 **/**/.ipynb**
+
+
+# Jekyll Related
+_site/
+*.jekyll-cache/
