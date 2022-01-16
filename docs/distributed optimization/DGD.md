@@ -8,6 +8,8 @@ nav_order: 2
 <script type="text/javascript" 
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"> MathJax.Hub.Config({ "HTML-CSS": { availableFonts: ["TeX"], }, tex2jax: { inlineMath: [['$', '$'], ["\\(", "\\)"]] }, displayMath: [['$$', '$$'], ['\[', '\]']], TeX: { extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"], equationNumbers: { autoNumber: "AMS" } }, showProcessingMessages: false, messageStyle: "none", imageFont: null, "AssistiveMML": { disabled: true } }); </script>
 
+- [Paper](http://ieeexplore.ieee.org/document/4749425/)
+
 - Nedic and Ozdaglar(2009)
 
 - Each agent performs the consensus step and then descent along the local subgradient direction of it's own **convex objective function**
@@ -22,6 +24,11 @@ nav_order: 2
 - Assumptions
   - Sub-gradient are unbounded
 
+- In vectorised form,  $X(k)$ denotes a matrix with i-th row row being $x_i(k)^T$ and similarly, we define $\nabla f(k)$ with i-th row being the sub-gradient at the i-th node i.e. $\nabla f_i(x_i(k))^T$. Note that both $X(k), \nabla f(k) \in \mathbb{R}^{n \times n}$, n being the number of nodes/dimension of $x_i$
+
+So, after vectorising, we get:
+
+$X(k+1) = W \cdot X(k) - \alpha(k) \cdot \nabla f(k)$
 
 ## Python Implementation
 ```python
