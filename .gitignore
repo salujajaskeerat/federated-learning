@@ -56,4 +56,7 @@ _site/
 *.jekyll-cache/
 .sass-cache/
 .jekyll-cache/
- 
+
+# PDF files
+Robust-fed-ml/**
+Distributed-Optimization/**
